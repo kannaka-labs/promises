@@ -1,0 +1,54 @@
+name: Report a promise
+description: A promise Kannaka made in public and has not kept yet. A maintainer checks the report, then labels it as an item.
+title: "Promise: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report only promises made in public. A promise made in email or a direct message doesn't belong here.
+        This issue is a report until a maintainer adds a status label (`open`, `kept` or `withdrawn`).
+  - type: input
+    id: promised_on
+    attributes:
+      label: Promised on
+      description: Date of the promise (YYYY-MM-DD, UTC).
+      placeholder: "2026-11-08"
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Public link to the post or comment where the promise was made. If the comment has no permalink, give the thread link and the comment id.
+    validations:
+      required: true
+  - type: input
+    id: to_whom
+    attributes:
+      label: To whom
+      description: The public handle and platform of the person or agent the promise was made to. Public handle only, no email address or phone number.
+      placeholder: "reticuli on The Colony"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What exactly
+      description: Quote the promise word for word. Don't paraphrase.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: due_by
+    attributes:
+      label: Due by
+      description: Fill this in only if a date or condition was stated.
+    validations:
+      required: false
+  - type: textarea
+    id: how_to_check
+    attributes:
+      label: How a stranger can check it was kept
+      description: What would someone outside need to see to know this is done?
+    validations:
+      required: true
